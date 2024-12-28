@@ -8,6 +8,22 @@ ERROR='\033[0;31m'
 SUCCESS='\033[0;32m'
 NC='\033[0m' # No Color
 
+# Print the banner
+echo -e "${BANNER}"
+echo -e "     __          _      _           _                   "
+echo -e "  /\ \ \___   __| | ___| |__   ___ | |_                 "
+echo -e " /  \/ / _ \ / _` |/ _ \ '_ \ / _ \| __|                "
+echo -e "/ /\  / (_) | (_| |  __/ |_) | (_) | |_                 "
+echo -e "\_\ \/ \___/ \__,_|\___|_.__/ \___/ \__|                "
+echo -e "                                                       "
+echo -e " _              __        _ _          _      _        "
+echo -e "| |__  _   _    \ \ _   _| (_)_      _(_) ___| | _____ "
+echo -e "| '_ \| | | |    \ \ | | | | \ \ /\ / / |/ __| |/ / __|"
+echo -e "| |_) | |_| | /\_/ / |_| | | |\ V  V /| | (__|   <\__ \"
+echo -e "|_.__/ \__, | \___/ \__,_|_|_| \_/\_/ |_|\___|_|\_\___/"
+echo -e "       |___/                                            "
+echo -e "${NC}"
+
 # Step 1: Ask for the Docker container name
 echo -e "${INFO}Please enter the Docker container name:${NC}"
 read container_name
@@ -44,7 +60,7 @@ RUN git clone https://github.com/juliwicks/nodepay-runner
 # Set the working directory to the cloned repository
 WORKDIR /app/nodepay-runner
 
-# Install Python dependencies from requirements.txt
+# Install Python dependencies from requirements.txt (after removing os)
 RUN pip install -r requirements.txt
 
 # Command to run the main.py script
