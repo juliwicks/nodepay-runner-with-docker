@@ -44,7 +44,7 @@ RUN git clone https://github.com/juliwicks/nodepay-runner
 # Set the working directory to the cloned repository
 WORKDIR /app/nodepay-runner
 
-# Install Python dependencies from requirements.txt (after removing os)
+# Install Python dependencies from requirements.txt
 RUN pip install -r requirements.txt
 
 # Command to run the main.py script
