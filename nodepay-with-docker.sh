@@ -8,6 +8,10 @@ ERROR='\033[0;31m'
 SUCCESS='\033[0;32m'
 NC='\033[0m' # No Color
 
+echo -e "${INFO}=============================${NC}"
+echo -e "${INFO}Script by Nodebot (Juliwicks)${NC}"
+echo -e "${INFO}=============================${NC}"
+
 # Step 1: Ask for the Docker container name
 echo -e "${INFO}Please enter the Docker container name:${NC}"
 read container_name
