@@ -60,9 +60,9 @@ EOF
 echo -e "${INFO}Building Docker image...${NC}"
 docker build -t nodepay-runner .
 
-# Step 7: Run the Docker container with auto-start
-echo -e "${INFO}Running Docker container with name: $container_name${NC}"
-docker run -d --name "$container_name" --mac-address "$mac_address" --env UUID="$uuid" --restart always nodepay-runner
+# Step 7: Run the Docker container interactively
+echo -e "${INFO}Running Docker container interactively with name: $container_name${NC}"
+docker run -it --name "$container_name" --mac-address "$mac_address" --env UUID="$uuid" nodepay-runner
 
 # Step 8: Confirm the container is running
 echo -e "${SUCCESS}Docker container is set to auto-start and is currently running.${NC}"
