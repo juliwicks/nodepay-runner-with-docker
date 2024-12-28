@@ -44,8 +44,13 @@ RUN git clone https://github.com/juliwicks/nodepay-runner
 # Set the working directory to the cloned repository
 WORKDIR /app/nodepay-runner
 
-# Install Python dependencies from requirements.txt
-RUN pip install -r requirements.txt
+# Install each Python package one by one
+RUN pip install aiohttp
+RUN pip install curl-cffi
+RUN pip install fake-useragent
+RUN pip install loguru
+RUN pip install requests
+RUN pip install colorama
 
 # Command to run the main.py script
 CMD ["python3", "main.py"]
