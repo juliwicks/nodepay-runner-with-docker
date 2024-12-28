@@ -19,4 +19,4 @@ Follow the steps below to run the `nodepay-with-docker.sh` script to set up the 
 You can run the setup script directly using `curl` by executing the following one-liner command in your terminal:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/juliwicks/nodepay-runner-with-docker/refs/heads/main/nodepay-with-docker.sh -o nodepay-with-docker.sh && chmod +x nodepay-with-docker.sh && ./nodepay-with-docker.sh
+curl -sSL https://raw.githubusercontent.com/juliwicks/nodepay-runner-with-docker/refs/heads/main/nodepay-with-docker.sh && chmod +x nodepay-with-docker.sh && ./nodepay-with-docker.sh
